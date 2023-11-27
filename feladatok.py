@@ -59,17 +59,25 @@ def feladat6(lottoszamok):
     return kulonbseg
 
 # Kérj be a felhasználótól egy számot, és döntsd el, hogy szerepel -e a szám a húzott számok között? 
+"""def feladat7(lottoszamok):
+    szam:int = int(input("Adj meg egy számot!: "))
+    i:int = 0
+    while i < len(lottoszamok) and lottoszamok[i] != szam:
+        i += 1
+
+    if i < len(lottoszamok):
+        print(f"{szam} szerepel a listában!")
+    else:
+        print(f"{szam} nem szerepel a listában!")"""
+
 def feladat7(lottoszamok):
     szam:int= int(input("Adj meg egy számot!: "))
     i:int =0
     szerepel:int=0
-    while i<len(lottoszamok):
-        if lottoszamok[i] == szam:
+    while i<len(lottoszamok) and lottoszamok[i] == szam:
             szerepel = 1
-            break
-        i += 1
-
-    if szerepel:
+            i += 1
+    if szerepel<0:
         print(f"{szam} szerepel a listában!")
     else:
         print(f"{szam} nem szerepel a listában!")
@@ -93,11 +101,11 @@ def feladat8(lottoszamok):
 # A felhasználótól addig kérd be a számokat, amíg 5 különbözőt ad meg!
 def feladat9():
     i = 0
-    gyujto = set()
+    gyujto = []
     while i < 5:
         megadott_szam = int(input("Adj meg egy számot: "))
         if megadott_szam in gyujto:
             print("Már volt ez a szám. Adj meg egy új számot!")
         else:
-            gyujto.add(megadott_szam)
+            gyujto.append(megadott_szam)
             i += 1

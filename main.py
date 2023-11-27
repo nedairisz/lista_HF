@@ -21,12 +21,11 @@ print(f"{min} a legkisebb szám a listában.")
 kulonbseg= feladatok.feladat6(lottoszamok)
 print(f"Alegkisebb és legnagyobb szám kulonbsége {kulonbseg}")
 
-feladatok.feladat7(lottoszamok)
 
-
+feladatok.feladat9()
 talalatok = feladatok.feladat8(lottoszamok)
 print(f"{talalatok} számot találtál el!")
 
 '''
 
-feladatok.feladat9()
+feladatok.feladat7(lottoszamok)
